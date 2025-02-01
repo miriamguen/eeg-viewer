@@ -31,6 +31,14 @@ selected_state = st.selectbox("Select a State:", states)
 # Find matching image
 selected_image = f"{selected_subject}_{selected_state}_.png"
 if selected_image in images:
-    st.image(os.path.join(image_folder, selected_image), use_container_width=True)
+    # Center the PNG image and set it to 90% width using markdown and HTML
+    st.markdown(
+        f"""
+        <div style="display: flex; justify-content: center;">
+            <img src="{os.path.join(image_folder, selected_image)}" width="90%">
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 else:
     st.warning("No image available for this selection.")
