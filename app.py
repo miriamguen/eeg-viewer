@@ -8,9 +8,10 @@ st.title("EEG Example Viewer")
 # Display the transition probability figure
 svg_file = "transition_prob.svg"
 if os.path.exists(svg_file):
-    with open(svg_file, "r") as f:
-        svg_content = f.read()
-    st.components.v1.html(f'<div style="text-align: center;">{svg_content}</div>', height=800)
+    # with open(svg_file, "r") as f:
+    #     svg_content = f.read()
+    # st.components.v1.html(f'<div style="text-align: center;">{svg_content}</div>', height=800)
+    st.image(svg_file, use_container_width=True)
 else:
     st.warning("Transition probability figure not found.")
 
