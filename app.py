@@ -30,7 +30,7 @@ selected_subject = st.selectbox("Select a Subject:", subject_names)
 selected_state = st.selectbox("Select a State:", states)
 
 # Find matching image
-selected_image = f"{selected_subject}_{selected_state}_.png"
+selected_image = f"{selected_subject}_{selected_state}.svg"
 if selected_image in images:
     st.image(os.path.join(image_folder, selected_image), use_container_width=True)
 else:
