@@ -23,7 +23,7 @@ images = [img for img in os.listdir(image_folder) if img.endswith(".png")]
 
 # Extract subjects and states from filenames
 subject_names = sorted(set(img.split("_")[0] for img in images))
-states = sorted(set(img.split("_")[1] for img in images))
+states = sorted(set(img.split("_")[1].replace('.svg', '') for img in images))
 
 # Create dropdown menus for subject and state
 selected_subject = st.selectbox("Select a Subject:", subject_names)
