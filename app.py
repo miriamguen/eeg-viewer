@@ -10,7 +10,7 @@ svg_file = "transition_prob.svg"
 if os.path.exists(svg_file):
     with open(svg_file, "r") as f:
         svg_content = f.read()
-    st.components.v1.html(f'<div style="text-align: center;">{svg_content}</div>', height=400)
+    st.components.v1.html(f'<div style="text-align: center;">{svg_content}</div>', height=700)
 else:
     st.warning("Transition probability figure not found.")
 
