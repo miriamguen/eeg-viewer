@@ -19,7 +19,7 @@ else:
 image_folder = "figures"
 
 # Get a list of available EEG images
-images = [img for img in os.listdir(image_folder) if img.endswith(".png")]
+images = [img for img in os.listdir(image_folder) if img.endswith(".svg")]
 
 # Extract subjects and states from filenames
 subject_names = sorted(set(img.split("_")[0] for img in images))
