@@ -5,6 +5,13 @@ import os
 st.set_page_config(page_title="EEG Viewer", layout="wide")
 st.title("EEG Example Viewer")
 
+# Display the transition probability figure
+svg_file = "transition_prob.svg"
+if os.path.exists(svg_file):
+    st.markdown(f'<div style="text-align: center;"><img src="{svg_file}" width="80%"></div>', unsafe_allow_html=True)
+else:
+    st.warning("Transition probability figure not found.")
+
 # Define the folder containing EEG images
 image_folder = "figures"
 
