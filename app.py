@@ -3,7 +3,7 @@ import os
 
 # Set up the page
 st.set_page_config(page_title="EEG Viewer", layout="wide")
-st.title("EEG Example Viewer")
+st.title("EEG Example Viewer\n for the 7 state analysis in the:\n 'The Hypno-PC: Uncovering Sleep Dynamics through Principal Component Analysis and Hidden Markov Modeling of Electrophysiological Signals.'\n For more detail see: https://biorxiv.org/lookup/doi/10.1101/2025.01.02.631039")
 
 # Display the transition probability figure
 svg_file = "transition_prob.svg"
